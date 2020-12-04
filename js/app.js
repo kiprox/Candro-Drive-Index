@@ -691,8 +691,8 @@ function copyToClipboard(str) {
 function file_video(path) {
 	const url = window.location.origin + path;
 	const content = `
-  <link href="https://cdn.jsdelivr.net/gh/tulungagung/css@master/video-js/video-js.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/tulungagung/js@master/video-js/video-js.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video-js.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js"></script>
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
@@ -702,7 +702,6 @@ function file_video(path) {
     <source src="${url}" type="video/webm" />
   </video>
   </div>
-  <p class="card-text text-center"><a href="${url}" class="btn btn-primary">Download</a></p><br>
   </div>
   </div>
   `;
