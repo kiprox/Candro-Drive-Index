@@ -288,7 +288,7 @@ async function handleRequest(request) {
 <body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
 <div class="mdui-container">
     <br><br>
-    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/tulungagung/svg@master/candro-drive-index.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
+    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/tulungagung/svg@master/social/candro-drive-index.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
     <br>
     <div class="mdui-row">
         <div class="mdui-col-sm-2">
