@@ -50,7 +50,6 @@ const authConfig = {
 	"enable_password_file_verify": false
 };
 
-
 /**
  * web ui config
  */
@@ -98,7 +97,6 @@ const CONSTS = new(class {
 	};
 	folder_mime_type = 'application/vnd.google-apps.folder';
 })();
-
 
 // gd instances
 var gds = [];
@@ -271,7 +269,6 @@ async function handleRequest(request) {
 		return gd.down(file.id, range, inline_down);
 	}
 }
-
 
 async function apiRequest(request, gd) {
 	let url = new URL(request.url);
@@ -508,7 +505,6 @@ class googleDrive {
 		return result
 	}
 
-
 	async _ls(parent, page_token = null, page_index = 0) {
 		// console.log("_ls", parent);
 
@@ -575,7 +571,6 @@ class googleDrive {
 		return this.passwords[path];
 	}
 
-
 	/**
 	 * Get share drive information by id
 	 * @param any_id
@@ -593,7 +588,6 @@ class googleDrive {
 
 		return null
 	}
-
 
 	/**
 	 * search for
@@ -654,7 +648,6 @@ class googleDrive {
 			data: res_obj
 		};
 	}
-
 
 	/**
 	 * Get the file object of the upper folder of this file or folder layer by layer. Note: It will be very slow! ! !
@@ -747,7 +740,6 @@ class googleDrive {
 
 		return cache[0].path;
 	}
-
 
 	// Get file item based on id
 	async findItemById(id) {

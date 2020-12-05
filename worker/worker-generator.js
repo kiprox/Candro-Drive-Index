@@ -1,3 +1,6 @@
+/**
+ * @kiprox Candro Drive Index Generator
+ */
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
 });
