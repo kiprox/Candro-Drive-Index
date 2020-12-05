@@ -21,7 +21,7 @@ const authConfig = {
 	 */
 	"roots": [{
 		"id": "",
-		"name": "Cloud Zero",
+		"name": "Cloud NAS",
 		"user": "",
 		"pass": "",
 		"protect_file_link": false
@@ -50,20 +50,19 @@ const authConfig = {
 	"enable_password_file_verify": false
 };
 
-
 /**
  * web ui config
  */
 const uiConfig = {
 	"theme": "candro_bootstrap", // Change doesn't works
 	"dark_mode": true, // switch between light or dark themes
-	"version": "1.0.0", // don't touch this one. get latest code using generator at https://github.com/kiprox/Candro-Drive-Index
-	"logo_image": false, // true if you're using image link in next option.
-	"logo_link_name": "Candro Drive Index", // if logo is true then link otherwise just text for name
-	"contact_link": "https://t.telegram.ind.in/BhadooCloud", // Link to Contact Button on Menu
+	"version": "2.0.0", // don't touch this one. get latest code using generator at https://github.com/kiprox/Candro-Drive-Index
+	"logo_image": true, // true if you're using image link in next option.
+	"logo_link_name": "https://cdn.jsdelivr.net/gh/tulungagung/svg@master/social/candro-drive-index.svg", // if logo is true then link otherwise just text for name
+	"contact_link": "https://t.me/kiprox", // Link to Contact Button on Menu
 	"copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
 	"company_name": "Candro Cloud", // Name next to copyright
-	"company_link": "https://t.telegram.ind.in/BhadooCloud", // link of copyright name
+	"company_link": "https://delta.web.id", // link of copyright name
 	"credit": true, // Set this to true to give us credit
 };
 
@@ -99,7 +98,6 @@ const CONSTS = new(class {
 	folder_mime_type = 'application/vnd.google-apps.folder';
 })();
 
-
 // gd instances
 var gds = [];
 
@@ -108,10 +106,11 @@ function html(current_drive_order = 0, model = {}) {
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
   <meta name="robots" content="noindex" />
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/images/favicon.ico">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/img/favicon.ico">
   <script>
     window.drive_names = JSON.parse('${JSON.stringify(authConfig.roots.map(it => it.name))}');
     window.MODEL = JSON.parse('${JSON.stringify(model)}');
@@ -119,15 +118,14 @@ function html(current_drive_order = 0, model = {}) {
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/css/mdui-style.min.css">
-  <script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/css/bootstrap/${uiConfig.dark_mode ? 'dark' : 'light'}.min.css">
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/app.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/mdui.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>  
 </head>
 <body>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/bootstrap.min.js"></script>
 </html>`;
 };
 
@@ -272,7 +270,6 @@ async function handleRequest(request) {
 	}
 }
 
-
 async function apiRequest(request, gd) {
 	let url = new URL(request.url);
 	let path = url.pathname;
@@ -413,7 +410,7 @@ class googleDrive {
 			pass = this.root.pass || '',
 			_401 = new Response('Unauthorized', {
 				headers: {
-					'WWW-Authenticate': `Basic realm="goindex:drive:${this.order}"`
+					'WWW-Authenticate': `Basic realm="candro:drive:${this.order}"`
 				},
 				status: 401
 			});
@@ -508,7 +505,6 @@ class googleDrive {
 		return result
 	}
 
-
 	async _ls(parent, page_token = null, page_index = 0) {
 		// console.log("_ls", parent);
 
@@ -575,7 +571,6 @@ class googleDrive {
 		return this.passwords[path];
 	}
 
-
 	/**
 	 * Get share drive information by id
 	 * @param any_id
@@ -593,7 +588,6 @@ class googleDrive {
 
 		return null
 	}
-
 
 	/**
 	 * search for
@@ -654,7 +648,6 @@ class googleDrive {
 			data: res_obj
 		};
 	}
-
 
 	/**
 	 * Get the file object of the upper folder of this file or folder layer by layer. Note: It will be very slow! ! !
@@ -747,7 +740,6 @@ class googleDrive {
 
 		return cache[0].path;
 	}
-
 
 	// Get file item based on id
 	async findItemById(id) {

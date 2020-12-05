@@ -1,3 +1,6 @@
+/**
+ * @kiprox Candro Drive Index Generator
+ */
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
 });
@@ -285,7 +288,7 @@ async function handleRequest(request) {
 <body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
 <div class="mdui-container">
     <br><br>
-    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.1/bhadoo-cloud-logo.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
+    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/tulungagung/svg@master/social/candro-drive-index.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
     <br>
     <div class="mdui-row">
         <div class="mdui-col-sm-2">
@@ -335,7 +338,7 @@ async function handleRequest(request) {
     <div class="mdui-typo">
         <pre class="snippet"><code class="html js">${codeJS}</code></pre>
     </div>
-    <center><h5>© 2020 - Candro Cloud Cyber Systems</h5></center>
+    <center><h5>&COPY; 2020 - Candro Cloud Cyber Systems</h5></center>
 </div>
 
 <script>

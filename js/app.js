@@ -12,7 +12,7 @@ function init() {
 <div id="content">
 </div>
 <br>
-<footer class="text-muted"> <div class="container"> <p class="float-right"> <a href="#">Back to top</a> </p> ${UI.credit ? '<p>Redesigned with <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" /> </svg> by <a href="https://github.com/kiprox/Candro-Drive-Index" target="_blank">KiPRoX</a>, based on Open Source Softwares.</p>' : ''} <p>© ${UI.copyright_year} - <a href=" ${UI.company_link}" target="_blank"> ${UI.company_name}</a>, All Rights Reserved.</p> </div> </footer>
+<footer class="text-muted"> <div class="container"> <p class="float-right"> <a href="#">Back to top</a> </p> ${UI.credit ? '<p>Created with <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" /> </svg> by <a href="https://keybase.io/candro" target="_blank">Delta Operator</a>. </p>' : ''} <p>&COPY; ${UI.copyright_year} - <a href=" ${UI.company_link}" target="_blank"> ${UI.company_name}</a>, All Rights Reserved.</p> </div> </footer>
   `;
 	$('body').html(html);
 }
@@ -65,8 +65,7 @@ function render(path) {
 	}
 }
 
-
-// Render title
+// Render title name
 function title(path) {
 	path = decodeURI(path);
 	var cur = window.current_drive_order || 0;
@@ -112,7 +111,7 @@ function nav(path) {
 	});
 	html += `</div></li>`;
 
-	html += `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Current Path</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"  href="/${cur}:/ ">> Home</a>`;
+	html += `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">File Path</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"  href="/${cur}:/ ">> Home</a>`;
 
 	if (!model.is_search_page) {
 		var arr = path.trim('/').split('/');
@@ -132,7 +131,7 @@ function nav(path) {
 	}
 
 	html += `</div></li><li class="nav-item">
-    <a class="nav-link" href="${UI.contact_link}" target="_blank">Contact</a>
+    <a class="nav-link" href="${UI.contact_link}" target="_blank">Contact Us</a>
   </li>`;
 
 	var search_text = model.is_search_page ? (model.q || '') : '';
@@ -140,7 +139,7 @@ function nav(path) {
 	var search_bar = `
 </ul>
 <form class="form-inline my-2 my-lg-0" method="get" action="/${cur}:search">
-<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search" value="${search_text}" required>
+<input class="form-control mr-sm-2" name="q" type="search" placeholder="keyword" aria-label="Search" value="${search_text}" required>
 <button class="btn ${UI.dark_mode ? 'btn-secondary' : 'btn-outline-success'} my-2 my-sm-0" onclick="if($('#search_bar').hasClass('mdui-textfield-expanded') && $('#search_bar_form>input').val()) $('#search_bar_form').submit();" type="submit">Search</button>
 </form>
 </div>
@@ -206,7 +205,7 @@ function list(path) {
 	var content = `
   <div class="container"><br>
   <div class="card">
-  <h5 class="card-header" id="folderne"><input type="text" id="folderne" class="form-control" placeholder="Current Path: Homepage" value="" readonly><script>document.getElementById("folderne").innerHTML='Current Folder: '+decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')-1))).replace('/','').replace('/','');</script>
+  <h5 class="card-header" id="folderne"><input type="text" id="folderne" class="form-control" placeholder="Folder Path: Homepage" value="" readonly><script>document.getElementById("folderne").innerHTML='Dashboard: '+decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')-1))).replace('/','').replace('/','');</script>
   </h5>
   <div id="list" class="list-group">
   </div>
@@ -615,7 +614,6 @@ function get_file(path, file, callback) {
 	}
 }
 
-
 // File display ?a=view
 function file(path) {
 	var name = path.split('/').pop();
@@ -664,7 +662,7 @@ function file_code(path) {
 <div class="container"><br>
 <div class="card">
 <div class="card-body">
-  <div class="alert alert-danger" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
+  <div class="alert alert-info" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
 <code id="editor" class="card-text"></code>
 </div>
 <p class="card-text text-center"><a href="${href}" class="btn btn-primary">Download</a></p><br>`;
@@ -691,18 +689,17 @@ function copyToClipboard(str) {
 function file_video(path) {
 	const url = window.location.origin + path;
 	const content = `
-  <link href="https://cdn.jsdelivr.net/gh/jscdn/css@master/video-js/video-js.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/jscdn/js@master/video-js/video-js.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/tulungagung/css@master/videojs/video-js.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/tulungagung/js@master/videojs/video-js.min.js"></script>
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="alert alert-danger" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
-  <video width="100%" height="auto" controls>
+  <div class="alert alert-info" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
+  <video controls width="100%" height="auto" autoplay preload="auto" >
     <source src="${url}" type="video/mp4" />
     <source src="${url}" type="video/webm" />
   </video>
   </div>
-  <p class="card-text text-center"><a href="${url}" class="btn btn-primary">Download</a></p><br>
   </div>
   </div>
   `;
@@ -716,7 +713,7 @@ function file_audio(path) {
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="alert alert-danger" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
+  <div class="alert alert-warning" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
   <audio controls>
     <source src="${url}" type="audio/ogg">
     <source src="${url}" type="audio/mpeg">
@@ -783,7 +780,7 @@ function file_image(path) {
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="alert alert-danger" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
+  <div class="alert alert-success" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
   <img src="${url}" width="50%">
   </div>
   <p class="card-text text-center"><a href="${url}" class="btn btn-primary">Download</a></p><br>
@@ -803,7 +800,6 @@ function file_image(path) {
 		file(filepath)
 	});
 }
-
 
 // Time conversion
 function utc2beijing(utc_datetime) {
@@ -861,14 +857,13 @@ String.prototype.trim = function (char) {
 	return this.replace(/^\s+|\s+$/g, '');
 };
 
-
-// README.md HEAD.md support
+// markdown README.md HEAD.md support
 function markdown(el, data) {
 	if (window.md == undefined) {
-		//$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js',function(){
+		$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@12.0.2/dist/markdown-it.min.js',function(){
 		window.md = window.markdownit();
 		markdown(el, data);
-		//});
+		});
 	} else {
 		var html = md.render(data);
 		$(el).show().html(html);
@@ -880,7 +875,6 @@ window.onpopstate = function () {
 	var path = window.location.pathname;
 	render(path);
 }
-
 
 $(function () {
 	init();
