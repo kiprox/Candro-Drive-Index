@@ -205,7 +205,7 @@ function list(path) {
 	var content = `
   <div class="container"><br>
   <div class="card">
-  <h5 class="card-header" id="folderne"><input type="text" id="folderne" class="form-control" placeholder="Folder Path: Homepage" value="" readonly><script>document.getElementById("folderne").innerHTML='> '+decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')-1))).replace('/','').replace('/','');</script>
+  <h5 class="card-header" id="folderne"><input type="text" id="folderne" class="form-control" placeholder="Folder Path: Homepage" value="" readonly><script>document.getElementById("folderne").innerHTML='Dashboard: '+decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')-1))).replace('/','').replace('/','');</script>
   </h5>
   <div id="list" class="list-group">
   </div>
