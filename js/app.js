@@ -695,7 +695,8 @@ function file_video(path) {
   <div class="card">
   <div class="card-body text-center">
   <div class="alert alert-info" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
-  <video width="100%" height="auto" autoplay="true" controls>
+  <video width="100%" height="auto" controls>
+  <video data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }' />
     <source src="${url}" type="video/mp4" />
     <source src="${url}" type="video/webm" />
   </video>
