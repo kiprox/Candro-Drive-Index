@@ -1,3 +1,6 @@
+/**
+ * @kiprox Candro Drive Index Generator
+ */
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
 });
@@ -335,7 +338,7 @@ async function handleRequest(request) {
     <div class="mdui-typo">
         <pre class="snippet"><code class="html js">${codeJS}</code></pre>
     </div>
-    <center><h5>© 2020 - Candro Cloud Cyber Systems</h5></center>
+    <center><h5>&COPY; 2020 - Candro Cloud Cyber Systems</h5></center>
 </div>
 
 <script>
