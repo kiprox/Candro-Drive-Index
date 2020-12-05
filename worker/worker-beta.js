@@ -21,7 +21,7 @@ const authConfig = {
 	 */
 	"roots": [{
 		"id": "",
-		"name": "Cloud Zero",
+		"name": "Cloud NAS",
 		"user": "",
 		"pass": "",
 		"protect_file_link": false
