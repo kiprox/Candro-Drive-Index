@@ -1,3 +1,3 @@
 ## Status
-[Open Original Repo] (https://github.com/ParveenBhadooOfficial/Google-Drive-Index)
+[Open Original Repo](https://github.com/ParveenBhadooOfficial/Google-Drive-Index)
  
