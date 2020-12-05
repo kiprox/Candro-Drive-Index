@@ -861,7 +861,7 @@ String.prototype.trim = function (char) {
 };
 
 
-// README.md HEAD.md support
+// markdown README.md HEAD.md support
 function markdown(el, data) {
 	if (window.md == undefined) {
 		$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js',function(){
