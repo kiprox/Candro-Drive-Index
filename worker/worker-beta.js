@@ -121,7 +121,6 @@ function html(current_drive_order = 0, model = {}) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/css/bootstrap/${uiConfig.dark_mode ? 'dark' : 'light'}.min.css">
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/app.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/mdui.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>
 </head>
 <body>
 </body>
