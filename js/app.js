@@ -71,7 +71,7 @@ function title(path) {
 	var cur = window.current_drive_order || 0;
 	var drive_name = window.drive_names[cur];
 	path = path.replace(`/${cur}:`, '');
-	// $('title').html(document.siteName + ' - ' + path);
+	$('title').html(document.siteName); // testing $('title').html(document.siteName + ' - ' + path);
 	var model = window.MODEL;
 	if (model.is_search_page)
 		$('title').html(`${drive_name} - Search results for ${model.q} `);
