@@ -65,8 +65,7 @@ function render(path) {
 	}
 }
 
-
-// Render title
+// Render title name
 function title(path) {
 	path = decodeURI(path);
 	var cur = window.current_drive_order || 0;
@@ -615,7 +614,6 @@ function get_file(path, file, callback) {
 	}
 }
 
-
 // File display ?a=view
 function file(path) {
 	var name = path.split('/').pop();
@@ -803,7 +801,6 @@ function file_image(path) {
 	});
 }
 
-
 // Time conversion
 function utc2beijing(utc_datetime) {
 	// Convert to normal time format year-month-day hour: minute: second
@@ -860,7 +857,6 @@ String.prototype.trim = function (char) {
 	return this.replace(/^\s+|\s+$/g, '');
 };
 
-
 // markdown README.md HEAD.md support
 function markdown(el, data) {
 	if (window.md == undefined) {
@@ -879,7 +875,6 @@ window.onpopstate = function () {
 	var path = window.location.pathname;
 	render(path);
 }
-
 
 $(function () {
 	init();
