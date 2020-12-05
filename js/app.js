@@ -689,8 +689,8 @@ function copyToClipboard(str) {
 function file_video(path) {
 	const url = window.location.origin + path;
 	const content = `
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video-js.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/tulungagung/css@master/videojs/video-js.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/tulungagung/js@master/videojs/video-js.min.js"></script>
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
