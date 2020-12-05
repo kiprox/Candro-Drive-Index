@@ -782,7 +782,7 @@ function file_image(path) {
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
-  <div class="alert alert-info" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
+  <div class="alert alert-success" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
   <img src="${url}" width="50%">
   </div>
   <p class="card-text text-center"><a href="${url}" class="btn btn-primary">Download</a></p><br>
@@ -864,10 +864,10 @@ String.prototype.trim = function (char) {
 // README.md HEAD.md support
 function markdown(el, data) {
 	if (window.md == undefined) {
-		//$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js',function(){
+		$.getScript('https://cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js',function(){
 		window.md = window.markdownit();
 		markdown(el, data);
-		//});
+		});
 	} else {
 		var html = md.render(data);
 		$(el).show().html(html);
