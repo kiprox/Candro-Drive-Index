@@ -413,7 +413,7 @@ class googleDrive {
 			pass = this.root.pass || '',
 			_401 = new Response('Unauthorized', {
 				headers: {
-					'WWW-Authenticate': `Basic realm="goindex:drive:${this.order}"`
+					'WWW-Authenticate': `Basic realm="candro:drive:${this.order}"`
 				},
 				status: 401
 			});
