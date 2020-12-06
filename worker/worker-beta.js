@@ -56,7 +56,7 @@ const authConfig = {
 const uiConfig = {
 	"theme": "candro_bootstrap", // Change doesn't works
 	"dark_mode": true, // switch between light or dark themes
-	"version": "2.0.0", // don't touch this one. get latest code using generator at https://github.com/kiprox/Candro-Drive-Index
+	"version": "1.5.0", // don't touch this one. get latest code using generator at https://github.com/kiprox/Candro-Drive-Index
 	"logo_image": false, // true if you're using image link in next option.
 	"logo_link_name": "Candro Drive Index", // if logo is true then link otherwise just text for name
 	"contact_link": "https://t.me/kiprox", // Link to Contact Button on Menu
