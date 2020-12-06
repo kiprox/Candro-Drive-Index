@@ -48,7 +48,7 @@ async function handleRequest(request) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-    <title>Candro Drive Index - Beta</title>
+    <title>Candro Drive Index</title>
     <link rel="icon" type="image/x-icon" href="https://www.cloudflare.com/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css">
     <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js"></script>
@@ -288,7 +288,7 @@ async function handleRequest(request) {
 <body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
 <div class="mdui-container">
     <br><br>
-    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.1/bhadoo-cloud-logo.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
+    <a href="https://github.com/kiprox/Candro-Drive-Index"><img border="0" alt="Candro Cloud" src="https://cdn.jsdelivr.net/gh/tulungagung/svg@master/social/candro-drive-index.svg" height="30px"></a><h3>Drive Index Generator - Beta</h3>
     <br>
     <div class="mdui-row">
         <div class="mdui-col-sm-2">
