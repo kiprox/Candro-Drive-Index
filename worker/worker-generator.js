@@ -338,7 +338,7 @@ async function handleRequest(request) {
     <div class="mdui-typo">
         <pre class="snippet"><code class="html js">${codeJS}</code></pre>
     </div>
-    <center><h5>&COPY; 2020 - Candro Cloud Cyber Systems</h5></center>
+    <center><h5>&COPY; 2020 - <a href="https://delta.web.id" target="_blank">Candro Cloud Cyber Systems</a></h5></center>
 </div>
 
 <script>
