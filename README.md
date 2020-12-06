@@ -1,2 +1,1 @@
-### Status 
-The Code Is Free But The time 
+##### Donate for Public Server Maintenance
