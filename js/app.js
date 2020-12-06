@@ -689,13 +689,13 @@ function copyToClipboard(str) {
 function file_video(path) {
 	const url = window.location.origin + path;
 	const content = `
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video-js.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.4/video-js.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.4/video.min.js"></script>
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
   <div class="alert alert-info" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
-  <video controls width="100%" height="auto" autoplay preload="metadata" controlsList="nodownload">
+  <video controls width="100%" height="auto" preload="metadata" controlsList="nodownload">
     <source src="${url}" type='video/mp4' />
 	<source src="${url}" type='video/webm; codecs="vp8, vorbis"' />
 	<source src="${url}" type='video/ogg; codecs="theora, vorbis"' />
