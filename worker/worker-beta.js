@@ -117,14 +117,14 @@ function html(current_drive_order = 0, model = {}) {
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/css/mdui-style.min.css">
-  <script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/css/bootstrap/${uiConfig.dark_mode ? 'dark' : 'light'}.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/app.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/mdui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>  
 </head>
 <body>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/kiprox/Candro-Drive-Index@${uiConfig.version}/js/bootstrap.min.js"></script>
 </html>`;
 };
 
@@ -154,7 +154,7 @@ async function handleRequest(request) {
 	}
 
 	// From path extract from drive order
-	// 并根据 drive order 获取对应的 gd instance
+	// drive order gd instance
 	let gd;
 	let url = new URL(request.url);
 	let path = url.pathname;
