@@ -691,6 +691,11 @@ function file_video(path) {
 	const content = `
   <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video-js.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-select-subtitle@0.1.1/es5/plugin.min.js"></script>
+  <script>
+	var player = videojs('cf-gdplay');
+	player.selectSubtitle();
+  </script>
   <div class="container"><br>
   <div class="card">
   <div class="card-body text-center">
