@@ -699,7 +699,7 @@ function file_video(path) {
     <source src="${url}" type='video/mp4' />
 	<source src="${url}" type='video/webm; codecs="vp8, vorbis"' />
 	<source src="${url}" type='video/ogg; codecs="theora, vorbis"' />
-	<track kind="subtitle" src="${window.location.pathname}" srclang="en" label="Default" default>
+	<track kind="captions" src="${url}" type='subtitle/srt' srclang="en" label="Default" default />
   </video>
   </div>
   </div>
