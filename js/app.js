@@ -699,7 +699,6 @@ function file_video(path) {
     <source src="${url}" type='video/mp4' />
 	<source src="${url}" type='video/webm; codecs="vp8, vorbis"' />
 	<source src="${url}" type='video/ogg; codecs="theora, vorbis"' />
-	<track kind="captions" src="${url}" srclang="en" label="Default" default />
   </video>
   </div>
   </div>
@@ -741,7 +740,6 @@ function file_pdf(path) {
   <div class="alert alert-danger" id="folderne" role="alert"></div><script>document.getElementById("folderne").innerHTML=decodeURI(this.window.location.href.substring(window.location.href.lastIndexOf('/',window.location.href.lastIndexOf('/')+1))).replace('/','').replace('?a=view','');</script>
   <object data="${inline_url}" type="application/pdf" name="${file_name}" style="width:100%;height:94vh;"><embed src="${inline_url}" type="application/pdf"/></object>
   </div>
-  <p class="card-text text-center"><a href="${url}" class="btn btn-primary">Download</a></p><br>
   </div>
   </div>
   `;
