@@ -103,7 +103,7 @@ var gds = [];
 
 function html(current_drive_order = 0, model = {}) {
 	return `<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/2000/xhtml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
