@@ -1,1 +1,1 @@
-![Developer Digital](https://delta.web.id/assets/img/candro-drive.png)
+![Developer Digital](https://github.com/kiprox/Candro-Drive-Index/blob/gh-pages/assets/images/candro-maintenis.png)
