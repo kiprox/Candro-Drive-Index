@@ -1,0 +1,48 @@
+# Site
+name: "CDI: The Magic Of Digital Content Creator"
+title: "Candro Drive Index"
+description: "Organisasi Pengembang Google, Amazon AWS dan Microsoft Azure. Layanan murah dari Google, google-drive, google workspace, virtual private server, vps murah, vps cheap, dedicated server, akun vpn gratis, OpenVpn"
+meta_description: "Web design, VPN Servers, Cheap VPS, Penyimpanan Online, Cloud Storage, Topup Game Online Murah, Jasa Instalasi, Customer Services, Payment Gateway, Cryptocurrency, Google Drive Proxy, Download Gratis, Free Source code Android, Catatan Digital Indonesia, Google Drive Proxy, Google Drive Unlimited, Amazon Web Services Indonesia, Candro Drive Index for Google Drive Unlimited."
+logo: 'assets/images/logo.png'
+favicon: 'favicon.ico'
+paginate: 6
+paginate_path: "/halaman/:num/"
+baseurl: ''
+url: "https://cdi.js.org"
+lang: "en"
+email: 'candroweb@gmail.com'
+google_analytics: 'G-W3BFP9ZJFH'
+disqus:
+sharethis: '<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fcfaa2193e5d300128f7f1e&product=sticky-share-buttons" async="sync"></script>'
+
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jemoji
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+# Archives
+collections:
+  delta:
+    output: true
+    permalink: /tutorial/:path/
+  posts:
+    output: true
+    permalink: /info/:title/
+  pages:
+    output: true
+    permalink: /:name/
+  
+# Other
+markdown: kramdown
+highlighter: rouge

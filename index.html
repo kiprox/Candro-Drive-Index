@@ -1,0 +1,84 @@
+---
+layout: default
+title: Layanan Online 24 Jam Nonstop
+lang: "id"
+---
+
+<!-- Home Jumbotron
+================================================== -->    
+<section class="intro full-width">
+    <div class="wrapintro">
+        <h1>Content Digital Index</h1>
+        <h2 class="lead">Buy an Unlimited Google Drive account now, because the number of accounts is limited!</h2>    
+        <a href="#" class="btn">Coba Sekarang</a>
+    </div>
+</section>
+
+<!-- Featured
+================================================== -->
+<section class="featured-posts">
+
+    <div class="section-title">
+        <h2><span>Featured</span></h2>
+    </div>
+
+    <div class="row listfeaturedtag">
+
+    {% for post in site.posts %}
+
+        {% if post.featured == true %}
+
+            {% include featuredbox.html %}
+
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Posts Index
+================================================== -->
+{% if paginator.previous_page %}
+{% if paginator.previous_page > 0 %}
+<div id="jumptopageof"></div>
+{% endif %}
+{% endif %}
+
+<section class="recent-posts row">
+
+    <div class="col-sm-12">
+
+        <div class="section-title">
+            <h2><span>All Stories</span></h2>
+        </div>
+
+        <div class="masonrygrid row listrecent">
+
+            {% for post in paginator.posts %}
+
+            {% unless post.featured == true %}
+
+                {% include postbox.html %}
+
+            {% endunless %}
+
+            {% endfor %}
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="bottompagination">
+
+            <span class="navigation" role="navigation">
+
+                {% include pagination.html %}
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
+<link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
+<title>{{ page.title }} | {{site.name}}</title>
+{% seo %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha512-92Uuf9KgednjnxHVHOfqG5XJ3RBBjs04YkL/CQ1h+AlBCLWupGLvqLzKFEH5ruQsyPFiZd7MwOTZuBFxinP7og==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tulungagung/aset@utama/css/candro-tema.min.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/custom.css">
+
+{{site.sharethis}}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3BFP9ZJFH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W3BFP9ZJFH');
+</script>
+
+{% if jekyll.environment == 'production' %}    
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '{{site.google_analytics}}', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endif %}
+
+</head>
