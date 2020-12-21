@@ -17,7 +17,7 @@ If you need freelancer job to converting video or with subtitles video, you can 
 
 #### Support this Project
 
-[![Website](https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png)](https://www.buymeacoffee.com/candro)
+[![Website](https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png)](https://www.buymeacoffee.com/candro){: target="_blank" rel="nofollow"}
 
 ***
 
