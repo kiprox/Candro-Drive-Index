@@ -20,5 +20,3 @@ If you need freelancer job to converting video or with subtitles video, you can 
 [![Website](https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png)](https://www.buymeacoffee.com/candro)
 
 ***
-
-![Developer Digital](https://github.com/kiprox/Candro-Drive-Index/blob/gh-pages/assets/images/candro-maintenis.png)
