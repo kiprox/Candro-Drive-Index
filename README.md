@@ -1,6 +1,6 @@
 ## Google Drive Index As Host
 
-If you need freelancer job to converting video or with subtitles video, you can contact me... Cheap Price !!
+trying to get donate
 
 ### Features
 
